@@ -11,7 +11,7 @@ config();
 
 app.use(express.json());
 app.use(cors({
-    origin: 'https://multi-step-form-subscription.netlify.app/',
+    origin: 'https://multi-step-form-subscription.netlify.app',
     allowedHeaders: ['Content-type'],
     methods: ['POST', 'GET'],
     optionsSuccessStatus: 200
