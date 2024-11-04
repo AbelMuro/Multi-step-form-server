@@ -11,7 +11,7 @@ config();
 
 app.use(express.json());
 app.use(cors({
-    origin: '*',
+    origin: 'https://contact-us-front-end.netlify.app',
     allowedHeaders: ['Content-type'],
     methods: ['POST', 'GET'],
     optionsSuccessStatus: 200
