@@ -30,3 +30,5 @@ app.listen(process.env.PORT || port, (error) => {
     }
     console.log(`server is running on port ${process.env.PORT || port}`)
 })
+
+module.exports = app;
