@@ -15,13 +15,14 @@ router.post('/create_subscription', async (req, res) => {
 
     try{
         const newSub = new Subscription(subscription);
-        newSub.save();
+        await newSub.save();
         res.status(200).send('subscription has been confirmed');
     }
     catch(error){
         if(error.message.includes('user validation failed'))
             console.log('Validation error, document is missing required properties')
-        res.status(500).send(error.message);
+        else
+            res.status(500).send(error.message);
     }
 });
 
